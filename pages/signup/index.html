@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Ifuture - Signup</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <img src="../../img/logo-future-eats-invert.png" alt="imagem">
+        <div class="titulo">Cadastrar</div>
+        <form class="formulario" id="form">
+            <input autofocus
+                placeholder="Nome e sobrenome" 
+                type="text"
+                id="name"><br>
+            <input                
+                placeholder="name@email.com" 
+                type="email"
+                id="email"><br>
+            <input
+                onkeypress="return event.charCode > 47 && event.charCode < 58"
+                placeholder="000.000.000-00" 
+                type="text"
+                id="cpf"><br>
+            <input
+                placeholder="Senha com mínimo de 6 caractéres" 
+                type="password"
+                id="password"><br>
+            <input
+                placeholder="Confirme sua senha"
+                type="password" 
+                id="confirmPass"><br>
+            <button>Criar</button>
+            <div class="button">
+                <a class="link-btn" href="../../index.html">Voltar para login</a>
+            </div>
+        </form>
+    </div>    
+</body>
+<script src="script.js"></script>
+</html>
