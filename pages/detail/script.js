@@ -1,6 +1,6 @@
 const url = 'https://us-central1-missao-newton.cloudfunctions.net/fourFoodB'
 const modal = document.getElementById('modalContainer')
-const selectValue = document.getElementById('selectQnt')
+const quantity = document.getElementById('selectQnt')
 
 
 
@@ -55,12 +55,15 @@ restMenu()
 const adicionar = (menu)=>{
     localStorage.setItem('productId', menu.id)
     localStorage.setItem('product', JSON.stringify(menu))
+    localStorage.setItem('quantity', quantity.value)
 
     document.getElementById('modalContainer').style.display = 'block'    
 }
 
 
 document.getElementById('closeModal').addEventListener('click', ()=>{
+    localStorage.removeItem('quantity')
+
     modal.style.display = 'none'
 })
 
@@ -68,12 +71,15 @@ let bag = []
 
 document.getElementById('addToCart').addEventListener('click', ()=>{
     const product = localStorage.getItem('product')
-    bag.push(product)
+    const parseProduct = JSON.parse(product)
+
+    parseProduct.quantity = quantity.value
+    bag.push(parseProduct)
 
     localStorage.setItem('bag', JSON.stringify(bag))
 })
 
 
-// selectValue.addEventListener('change', ()=>{
-    
-// })
+quantity.addEventListener('change', ()=>{
+    localStorage.setItem('quantity', quantity.value)
+})

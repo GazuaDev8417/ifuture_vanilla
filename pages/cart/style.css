@@ -1,0 +1,92 @@
+.container{
+    margin: 23px;
+	line-height: 6vh;
+}
+
+.header{
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10vh;
+}
+
+.header img{
+    width: 50px;
+	cursor: pointer;
+
+    @media(max-width: 600px){
+        width: 30px;
+    }
+}
+
+.sectionOne{
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-right: 10px;
+	background-color: rgb(175, 168, 168);
+    padding-left: 10px;
+    line-height: 7vh;
+}
+
+.sectionOne .edit{
+    width: 25px;
+    cursor: pointer
+}
+
+.sectionTwo .restaurante{
+	color: red;
+	font-size: 15pt;
+}
+
+.card{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid;
+	border-radius: 10px;
+	margin: 10px;
+	padding-right: 5px;
+}
+
+.card .picture{
+	width: 120px;
+	height: 170px;	
+	border-radius: 10px;
+	@media(max-width: 460px){
+		width: 75vw;
+	}
+	@media(max-width: 388px){
+		width: 63vw;
+	}
+	@media(max-width: 260px){
+		width: 50vw;
+	}
+}
+
+.card .section{
+	background-color: rgba(0, 0, 0, 0.5);
+	text-align: center;
+	width: 50%;
+	padding: 30px;
+	border-radius: 10px;
+}
+
+.card button{
+	border-radius: 10px;
+	background-color: #e8222e;
+	cursor: pointer;
+	margin-right: 3vw;
+}
+
+footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px;
+}
+
+footer img{
+	cursor: pointer;
+	width: 35px;
+}
