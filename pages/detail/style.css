@@ -54,3 +54,43 @@
 		height: 25vh;
 	}
 }
+
+#modalContainer{
+	display: none;
+	position: fixed;
+	background-color: #151515;
+	box-shadow: 3px 3px 7px black;
+	border: 1px solid;
+	width: 38vw;
+	height: 15vh;
+	border-radius: 20px;
+	text-align: center;
+	padding: 10px;
+	color: whitesmoke;
+	
+	@media(max-width: 575px){
+		height: 20vh;
+		width: 80vw;
+
+	}
+}
+
+.request{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px;
+}
+
+.request .btnContainer{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.request button{
+	cursor: pointer;
+	border-radius: 10px;
+	background-color: #e8222e;
+	margin: 5px;
+}

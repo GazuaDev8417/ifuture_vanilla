@@ -11,7 +11,32 @@
 <body>
     <h1 id="title" style="text-align: center;"></h1>
     <div class="card">
-        <img id="image" alt="imagem">    
+        <img id="image" alt="imagem">  
+<!-- -------------MODAL------------>
+        <div id="modalContainer">
+            <div>Informe a quantidade desejada e forma de pagamento.</div>
+            <div class="request">
+                <select
+                    id="selectQnt" 
+                    style="border-radius:10px; border-color:blue;">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+				</select>
+				<div class="btnContainer">
+                    <button id="closeModal">Cancelar</button>
+                    <button id="addToCart">Adicionar</button>
+                </div>
+            </div>
+        </div>
+<!---------------END OF MOAL--------->  
         <div style="margin: 15px;">
             <p id="category"></p>
             <div id="description" style="font-size: 11pt;"></div><br>
