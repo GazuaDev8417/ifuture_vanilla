@@ -1,0 +1,56 @@
+.card{
+    border: 1px solid red;
+	width: 50vw;
+	margin: auto;
+
+	@media(max-width: 600px){
+		width: 80vw;
+	}    
+}
+
+#image{
+    width: 50vw;
+	height: 50vh;
+
+	@media(max-width: 600px){
+		width: 80vw;
+	}
+}
+
+.card-products{
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid;
+	border-radius: 10px;
+	margin: 10px;
+
+    @media(max-width: 770px){
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+	}
+}
+
+.card-products h4{
+    color: red;
+    margin-bottom: -10px;
+}
+
+.card-products button{
+    background-color: #e8222e;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.picture{
+    width: 100px;
+	height: 130px;	
+	border-radius: 10px;
+
+	@media(max-width: 770px){
+		width: 73vw;
+		height: 25vh;
+	}
+}
