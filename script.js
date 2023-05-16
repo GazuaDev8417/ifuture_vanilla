@@ -1,4 +1,3 @@
-// import axios from 'axios'
 const email = document.getElementById('email')
 const password = document.getElementById('password')
 const url = 'https://us-central1-missao-newton.cloudfunctions.net/fourFoodB'

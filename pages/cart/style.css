@@ -3,14 +3,14 @@
 	line-height: 6vh;
 }
 
-.header{
+header{
     display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 10vh;
 }
 
-.header img{
+header img{
     width: 50px;
 	cursor: pointer;
 
@@ -65,11 +65,12 @@
 }
 
 .card .section{
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(175, 168, 168, 0.5);
 	text-align: center;
 	width: 50%;
-	padding: 30px;
+	padding: 10px;
 	border-radius: 10px;
+	line-height: 3vh;
 }
 
 .card button{
@@ -77,6 +78,20 @@
 	background-color: #e8222e;
 	cursor: pointer;
 	margin-right: 3vw;
+}
+
+.final{
+	margin: 5px;
+	width: 88vw;
+	height: 5vh;
+	font-weight: bold;
+	background-color: #e8222e;
+	border: none;
+	cursor: pointer;
+
+	@media(max-width: 600px){
+		height: 4vh;
+	}
 }
 
 footer{

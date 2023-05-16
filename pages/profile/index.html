@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
     <title>Ifuture - Profile</title>
 </head>
 <body>
-    <h1>Perfil do usuário</h1>
+    <div class="container">
+        <header>
+            <img onclick="window.history.back()" 
+                src="../../img/arrowBack.png"
+                alt="arrowBack-icon">
+            <h1>Meu Perfil</h1>
+            <img class="header-icon" 
+                src="../../img/logout.png"
+                alt="logout">
+        </header>
+        <hr>
+        <div class="sectionOne"></div>
+        <div class="sectionTwo"></div>
+        <div id="edit" style="display: none;">
+            <hr>
+            <button
+                onclick="hideForm()" 
+                class="btnHide">Ocultar</button>
+            <form id="form">
+                <input type='text' placeholder='Nome e sobrenome' id="name" autoFocus>
+				<input type='email' placeholder='email@email.com' id="email">
+				<input
+                    onkeypress="return event.charCode > 47 && event.charCode < 58"
+                    id="cpf" 
+                    type='text'
+                    placeholder='CPF(somente números)'>				
+				<br/><button class="btnForm">Atualizar</button>
+            </form>
+        </div>
+        <footer>
+            <a href="../feed/index.html">
+                <img src="../../img/homepage.png" alt="home-icon">
+            </a>
+            <a href="../cart/index.html">
+                <img src="../../img/shopping-cart.png" alt="cart-icon">
+            </a>
+            <a href="../profile/index.html">
+                <img src="../../img/avatar.png" alt="profile-icon">
+            </a>
+        </footer>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>

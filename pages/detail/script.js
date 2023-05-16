@@ -53,17 +53,13 @@ restMenu()
 
 
 const adicionar = (menu)=>{
-    localStorage.setItem('productId', menu.id)
     localStorage.setItem('product', JSON.stringify(menu))
-    localStorage.setItem('quantity', quantity.value)
-
     document.getElementById('modalContainer').style.display = 'block'    
 }
 
 
 document.getElementById('closeModal').addEventListener('click', ()=>{
-    localStorage.removeItem('quantity')
-
+    localStorage.removeItem('product')
     modal.style.display = 'none'
 })
 
@@ -77,9 +73,4 @@ document.getElementById('addToCart').addEventListener('click', ()=>{
     bag.push(parseProduct)
 
     localStorage.setItem('bag', JSON.stringify(bag))
-})
-
-
-quantity.addEventListener('change', ()=>{
-    localStorage.setItem('quantity', quantity.value)
 })
