@@ -72,12 +72,12 @@ const closePurchase = ()=>{
 
     if(bag.length > 0){
         const body = {
-            products: [
-                {
-                    id: localStorage.getItem('productId'),
-                    quantity: localStorage.getItem('quantity')
+            products: bag.map(item=>{
+                return {
+                    id: item.id,
+                    quantity: item.quantity
                 }
-            ], 
+            }),
             paymentMethod: payment.value
         }
 
