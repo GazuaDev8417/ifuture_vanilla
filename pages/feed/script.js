@@ -6,6 +6,15 @@ let restaurantsList = []
 
 
 
+window.addEventListener('load', ()=>{
+    const token = localStorage.getItem('token')
+
+    if(!token){
+        location.href = '../../index.html'
+    }
+})
+
+
 const listaDeRestaurantes = ()=>{
     fetch(`${url}/restaurants`, {
         headers: {

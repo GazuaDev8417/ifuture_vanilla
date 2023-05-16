@@ -3,6 +3,16 @@ const password = document.getElementById('password')
 const url = 'https://us-central1-missao-newton.cloudfunctions.net/fourFoodB'
 
 
+
+window.addEventListener('load', ()=>{
+    const token = localStorage.getItem('token')
+
+    if(token){
+        location.href = './pages/feed/index.html'
+    }
+})
+
+
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
 

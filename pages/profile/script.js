@@ -5,6 +5,16 @@ const email = document.getElementById('email')
 const cpf = document.getElementById('cpf')
 
 
+
+window.addEventListener('load', ()=>{
+    const token = localStorage.getItem('token')
+
+    if(!token){
+        location.href = '../../index.html'
+    }
+})
+
+
 const getProfile = ()=>{
     fetch(`${url}/profile`, {
         headers: {

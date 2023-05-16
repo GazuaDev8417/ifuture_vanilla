@@ -4,6 +4,14 @@ const quantity = document.getElementById('selectQnt')
 
 
 
+window.addEventListener('load', ()=>{
+    const token = localStorage.getItem('token')
+
+    if(!token){
+        location.href = '../../index.html'
+    }
+})
+
 
 const restMenu = ()=>{
     const id = localStorage.getItem('id')
