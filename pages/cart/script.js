@@ -81,18 +81,18 @@ const closePurchase = ()=>{
             paymentMethod: payment.value
         }
 
-        fetch({
+        fetch(`${url}/restaurants/${id}/order`, {
             method:'POST',
-            url:`${url}/restaurants/${id}/order`,
             headers: {
                 'Content-type': 'application/json',
                 auth: localStorage.getItem('token')
             },
             body: JSON.stringify(body)
         }).then(res => res.json()).then(data=>{
-            alert(data)
+            alert('Compra realizada com sucesso')
+            console.log(data)
         }).catch(e=>{
-            alert(e.message)
+            alert(JSON.stringify(e.message))
         })
     }else{
         alert('Precisa adicionar itens para fechar compra')
@@ -113,29 +113,25 @@ const activeOrder = ()=>{
 }
 
 
-const itemsFormCart = ()=>{
-    document.getElementById('products').innerHTML = bag.map(item=>{
-        return`
-            <div class='card' key=${item.id}>
-                <img src=${item.photoUrl} class='picture'>
-                <div class='section'>
-                    <div style='color: red; font-size: 16pt'>${item.name}</div><br>
-                    <div style='text-align: left; padding-left: 10px'>
-                        <div><b>Descrição:</b> ${item.description}</div>
-                        <div><b>Quantidade:</b> ${item.quantity}</div>
-                        <div>
-                            <b>Preço: </b>R$ ${item.price.toFixed(2)}
-                        </div>
-                        <div><b>Total: </b>R$ ${(item.price * item.quantity).toFixed(2)}</div>
-                    </div>                
-                </div>
-                <button onclick='removeFromCart(${JSON.stringify(item)})'>Remover</button>
+document.getElementById('products').innerHTML = bag.map(item=>{
+    return`
+        <div class='card' key=${item.id}>
+            <img src=${item.photoUrl} class='picture'>
+            <div class='section'>
+                <div style='color: red; font-size: 16pt'>${item.name}</div><br>
+                <div style='text-align: left; padding-left: 10px'>
+                    <div><b>Descrição:</b> ${item.description}</div>
+                    <div><b>Quantidade:</b> ${item.quantity}</div>
+                    <div>
+                        <b>Preço: </b>R$ ${item.price.toFixed(2)}
+                    </div>
+                    <div><b>Total: </b>R$ ${(item.price * item.quantity).toFixed(2)}</div>
+                </div>                
             </div>
-        `
-    }).join('')
-}
-
-itemsFormCart()
+            <button onclick='removeFromCart(${JSON.stringify(item)})'>Remover</button>
+        </div>
+    `
+}).join('')
 
 document.getElementById('total').innerHTML = `TOTAL R$ ${total().toFixed(2)}`
 document.querySelector('#purchase').addEventListener('click', closePurchase)

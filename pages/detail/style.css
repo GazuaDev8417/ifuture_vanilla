@@ -44,6 +44,21 @@
     margin-right: 10px;
 }
 
+.card-products .add-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 10vh;
+	margin: 10px;
+
+	@media(max-width: 600px){
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 80%;
+	}
+}
+
 .picture{
     width: 100px;
 	height: 130px;	
