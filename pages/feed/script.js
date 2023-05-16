@@ -6,7 +6,6 @@ let restaurantsList = []
 
 
 
-
 const listaDeRestaurantes = ()=>{
     fetch(`${url}/restaurants`, {
         headers: {

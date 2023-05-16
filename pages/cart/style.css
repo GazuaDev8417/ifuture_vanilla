@@ -83,8 +83,9 @@ header img{
 .final{
 	margin: 5px;
 	width: 88vw;
-	height: 5vh;
+	height: 7vh;
 	font-weight: bold;
+	font-size: 13pt;
 	background-color: #e8222e;
 	border: none;
 	cursor: pointer;
@@ -92,6 +93,14 @@ header img{
 	@media(max-width: 600px){
 		height: 4vh;
 	}
+}
+
+#purchase:hover{
+	color: white;
+}
+
+#active-order:hover{
+	color: white;
 }
 
 footer{

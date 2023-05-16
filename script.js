@@ -22,6 +22,5 @@ form.addEventListener('submit', (e)=>{
         location.href = './pages/feed/index.html'
     }).catch(e=>{
         alert(e.message)
-        console.log(e.message)
     })
 })

@@ -52,7 +52,13 @@ const restMenu = ()=>{
 restMenu()
 
 
+quantity.addEventListener('change', ()=>{
+    localStorage.setItem('quantity', quantity.value)
+})
+
 const adicionar = (menu)=>{
+    localStorage.setItem('quantity', quantity.value)
+    localStorage.setItem('productId', menu.id)
     localStorage.setItem('product', JSON.stringify(menu))
     document.getElementById('modalContainer').style.display = 'block'    
 }

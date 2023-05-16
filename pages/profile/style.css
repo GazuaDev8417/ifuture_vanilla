@@ -42,18 +42,23 @@ header .header-icon{
 	background-color: rgb(175, 168, 168);
 }
 
-#edit .btnHide{
-	position: absolute;
-	left: 80%;
+#edit .btnForm{
 	background-color: #e8222e;
 	border-radius: 10px;
 	cursor: pointer;
 }
 
-#edit .btnForm{
+#edit input[type='button']{
 	background-color: #e8222e;
 	border-radius: 10px;
 	cursor: pointer;
+}
+
+#orders .orders{
+	margin: 5px;
+	border: 1px solid;
+	border-radius: 10px;
+	padding-left: 10px;
 }
 
 footer{

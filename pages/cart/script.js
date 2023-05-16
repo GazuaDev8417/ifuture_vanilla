@@ -35,7 +35,6 @@ const getProfile = ()=>{
 
     }).catch(e=>{
         alert(e.message)
-        console.log(e.message)
     })
 }
 
@@ -68,15 +67,14 @@ const closePurchase = ()=>{
 
     if(bag.length > 0){
         const body = {
-            products: bag.map(item=>{
-                return {
-                    id: item.id,
-                    quantity: item.quantity
+            products: [
+                {
+                    id: localStorage.getItem('productId'),
+                    quantity: localStorage.getItem('quantity')
                 }
-            }), 
+            ], 
             paymentMethod: payment.value
         }
-        console.log(body)
 
         fetch({
             method:'POST',
@@ -90,7 +88,6 @@ const closePurchase = ()=>{
             alert(data)
         }).catch(e=>{
             alert(e.message)
-            console.log(e.message)
         })
     }
 }
@@ -105,7 +102,6 @@ const activeOrder = ()=>{
         alert(JSON.stringify(data.order))
     }).catch(e=>{
         alert(e.message)
-        console.log(e.message)
     })
 }
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Ifuture - Endereço</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <header>
+            <img
+                onclick="window.history.back()" 
+                src="../../img/arrowBack.png" 
+                alt="imagem">
+            <h1>Meu endereço</h1>
+            <div></div>
+        </header>
+        <form id="form">
+            <input type='text' id="street" placeholder='Rua / Av.' autoFocus><br>
+            <input onkeypress="return event.charCode > 47 && event.charCode < 58" 
+                type='text' id="number" placeholder='Número'><br>
+            <input type='text' id="neighborhood" placeholder='Bairro'><br>
+            <input type='text' id="city" placeholder='Cidade'><br>
+            <input type='text' id="state" placeholder='Estado'><br>
+            <input type='text' id="complement" placeholder='Complemento'><br>
+            <button>Cadastrar</button>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

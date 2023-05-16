@@ -15,7 +15,8 @@
                 src="../../img/arrowBack.png"
                 alt="arrowBack-icon">
             <h1>Meu Perfil</h1>
-            <img class="header-icon" 
+            <img 
+                class="header-icon" 
                 src="../../img/logout.png"
                 alt="logout">
         </header>
@@ -24,9 +25,6 @@
         <div class="sectionTwo"></div>
         <div id="edit" style="display: none;">
             <hr>
-            <button
-                onclick="hideForm()" 
-                class="btnHide">Ocultar</button>
             <form id="form">
                 <input type='text' placeholder='Nome e sobrenome' id="name" autoFocus>
 				<input type='email' placeholder='email@email.com' id="email">
@@ -35,9 +33,13 @@
                     id="cpf" 
                     type='text'
                     placeholder='CPF(somente números)'>				
-				<br/><button class="btnForm">Atualizar</button>
+				<br/>
+                <button class="btnForm">Atualizar</button>
+                <input type="button" value="Ocultar" onclick="hideForm()">
             </form>
         </div>
+        <p style="text-align: center;">Histórico de Pedidos</p><hr>
+        <div id="orders"></div>
         <footer>
             <a href="../feed/index.html">
                 <img src="../../img/homepage.png" alt="home-icon">
@@ -50,6 +52,7 @@
             </a>
         </footer>
     </div>
+    
 </body>
 <script src="script.js"></script>
 </html>

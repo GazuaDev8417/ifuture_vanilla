@@ -12,7 +12,6 @@ const getProfile = ()=>{
         }
     }).then(res => res.json()).then(data=>{
         const user = data.user
-        console.log(user)
 
         document.querySelector('.sectionOne').innerHTML = `
             <p style='padding-left: 10px;'>${user.name}<br>
@@ -28,11 +27,14 @@ const getProfile = ()=>{
             <div style='padding-left: 10px;'>Endereço cadastrado:<br>
                 ${user.address}
             </div>
-            <img class='edit' src="../../img/edit.png" alt="edit">
+            <img
+                onclick="location.href='../address/index.html'" 
+                class='edit'
+                src="../../img/edit.png"
+                alt="edit">
         `
     }).catch(e=>{
         alert(e.message)
-        console.log(e.message)
     })
 }
 
@@ -69,6 +71,44 @@ document.getElementById('form').addEventListener('submit', (e)=>{
         cpf.value = ''
     }).catch(e=>{
         alert(e.message)
-        console.log(e.message)
     })
+})
+
+
+const ordersHistory = ()=>{
+    fetch(`${url}/orders/history`, {
+        headers: {
+            auth: localStorage.getItem('token')
+        }
+    }).then(res => res.json()).then(data=>{
+        const orders = data.orders
+
+        document.getElementById('orders').innerHTML = orders.map(order=>{
+            return`
+                <div class='orders' key=${order.createdAt}>
+                    <div style='color: red; font-size: 15pt;'>
+                        ${order.restaurantName}
+                    </div>  
+                    Pedido feito em: ${new Date(order.createdAt).toLocaleDateString()}
+                    <div style='font-weight: bolder; font-size: 10pt;'>
+                        TOTAL: R$ ${order.totalPrice}
+                    </div>
+                </div>
+            `
+        }).join('')
+    }).catch(e=>{
+        alert(e.message)
+    })
+}
+
+ordersHistory()
+
+
+document.querySelector('.header-icon').addEventListener('click', ()=>{
+    const decide = window.confirm('Tem certeza que deseja se deslogar?')
+
+    if(decide){
+        localStorage.clear()
+        location.href = '../../index.html'
+    }
 })
