@@ -15,7 +15,11 @@ const getProfile = ()=>{
 
         document.querySelector('.sectionOne').innerHTML = `
             <div>Endereço para entrega:<br>${user.address}</div>
-            <img class='edit'  src="../../img/edit.png" alt='Edit icon'>
+            <img
+                onclick='location.href="../address/index.html"' 
+                class='edit'
+                src="../../img/edit.png"
+                alt='Edit icon'>
         `
 
         const id = localStorage.getItem('id')
