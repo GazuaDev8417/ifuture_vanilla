@@ -52,12 +52,13 @@ const total = ()=>{
 
 
 const removeFromCart = (item)=>{
-    const decide = window.confirm(`Tem certeza que quer excluir ${item.name}?`)
-
-    if(decide){
-        const newBag = bag.filter(bg => bg.id !== item.id)
-        
-        localStorage.setItem('bag', newBag)
+    const newBag = bag.filter(bg => bg.id !== item.id)
+    localStorage.setItem('bag', JSON.stringify(newBag))
+    location.reload()
+    
+    if(bag.length === 1){
+        localStorage.removeItem('productId')
+        localStorage.removeItem('quantity')
     }
 }
 
@@ -89,6 +90,8 @@ const closePurchase = ()=>{
         }).catch(e=>{
             alert(e.message)
         })
+    }else{
+        alert('Precisa adicionar itens para fechar compra')
     }
 }
 
@@ -105,25 +108,30 @@ const activeOrder = ()=>{
     })
 }
 
-document.getElementById('products').innerHTML = bag.map(item=>{
-    return`
-        <div class='card' key=${item.id}>
-            <img src=${item.photoUrl} class='picture'>
-            <div class='section'>
-                <div style='color: red; font-size: 16pt'>${item.name}</div><br>
-                <div style='text-align: left; padding-left: 10px'>
-                    <div><b>Descrição:</b> ${item.description}</div>
-                    <div><b>Quantidade:</b> ${item.quantity}</div>
-                    <div>
-                        <b>Preço: </b>R$ ${item.price.toFixed(2)}
-                    </div>
-                    <div><b>Total: </b>R$ ${(item.price * item.quantity).toFixed(2)}</div>
-                </div>                
+
+const itemsFormCart = ()=>{
+    document.getElementById('products').innerHTML = bag.map(item=>{
+        return`
+            <div class='card' key=${item.id}>
+                <img src=${item.photoUrl} class='picture'>
+                <div class='section'>
+                    <div style='color: red; font-size: 16pt'>${item.name}</div><br>
+                    <div style='text-align: left; padding-left: 10px'>
+                        <div><b>Descrição:</b> ${item.description}</div>
+                        <div><b>Quantidade:</b> ${item.quantity}</div>
+                        <div>
+                            <b>Preço: </b>R$ ${item.price.toFixed(2)}
+                        </div>
+                        <div><b>Total: </b>R$ ${(item.price * item.quantity).toFixed(2)}</div>
+                    </div>                
+                </div>
+                <button onclick='removeFromCart(${JSON.stringify(item)})'>Remover</button>
             </div>
-            <button onclick='removeFromCart(${JSON.stringify(item)})'>Remover</button>
-        </div>
-    `
-}).join('')
+        `
+    }).join('')
+}
+
+itemsFormCart()
 
 document.getElementById('total').innerHTML = `TOTAL R$ ${total().toFixed(2)}`
 document.querySelector('#purchase').addEventListener('click', closePurchase)
