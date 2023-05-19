@@ -90,8 +90,9 @@ header img{
 	border: none;
 	cursor: pointer;
 
-	@media(max-width: 600px){
-		height: 4vh;
+	@media(max-width: 800px){
+		height: 6vh;
+		font-size: 12pt;
 	}
 }
 

@@ -7,8 +7,8 @@
 .formulario{
 	line-height: 10vh;
 
-	@media(max-width: 600px){
-		line-height: 6vh;
+	@media(max-width: 800px){
+		line-height: 9vh;
 	}
 }
 
@@ -18,10 +18,14 @@ input{
 	padding-left: 10px;
 	font-size: 13pt;
 
-	@media(max-width: 600px){
+	@media(max-width: 800px){
 		width: 60vw;
-		height: 4vh;
+		height: 6vh;
 	}
+}
+
+input::placeholder{
+	font-size: 12pt;
 }
 
 .btn-container{
@@ -39,9 +43,10 @@ input{
 	cursor: pointer;
 	margin: 5px;
 
-	@media(max-width: 600px){
+	@media(max-width: 800px){
 		width: 63vw;
-		height: 4vh;
+		height: 6vh;
+		font-size: 12pt;
 	}
 }
 
@@ -59,9 +64,10 @@ button{
 	cursor: pointer;
 	margin: 5px;
 
-	@media(max-width: 600px){
+	@media(max-width: 800px){
 		width: 63vw;
-		height: 4vh;
+		height: 6vh;
+		font-size: 12pt;
 	}
 }
 

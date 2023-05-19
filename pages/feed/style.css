@@ -20,6 +20,10 @@
 	width: 50vw;
 	padding-left: 10px;	
     font-size: 16pt;
+
+	@media(max-width: 800px){
+		width: 75vw;
+	}
 }
 
 .categories{
@@ -49,7 +53,7 @@
 	margin: auto;
 	margin-bottom: 40px;
 
-	@media(max-width: 600px){
+	@media(max-width: 800px){
 		width: 80vw;
 	}
 }
@@ -59,7 +63,7 @@
 	height: 50vh;
 	cursor: pointer;
 
-	@media(max-width: 600px){
+	@media(max-width: 800px){
 		width: 80vw;
 	}
 }
