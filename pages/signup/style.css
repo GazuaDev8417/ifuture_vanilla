@@ -1,76 +1,45 @@
-.titulo{
-    margin-top: 8vh;
-	font-size: 1.4rem;
-	margin-bottom: 3vh;
+.container{
+    text-align: center;
+    margin-top: 5vh ;
 }
 
-.formulario{
-	line-height: 8.5vh;
-
-	@media(max-width: 800px){
-		line-height: 8vh;
-	}
+.title{
+    font-size: 1.5rem;
+    margin: 5vh 0 5vh;
 }
 
-input{
-	height: 7vh;
-	width: 40vw;
-	padding-left: 10px;
-	font-size: 13pt;
-
-	@media(max-width: 800px){
-		width: 60vw;
-		height: 6vh;
-	}
+form{
+    line-height: 10px;
 }
 
-input::placeholder{
-	font-size: 12pt;
+.input{
+    width: 30vw;
+    margin: auto;
+
+    @media(max-width: 800px){
+        width: 60vw;
+    }
 }
 
 .btn-container{
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-}
-
-.btn-container input[type='button']{
-	width: 41.5vw;
-	height: 7vh;
-	font-weight: bold;
-	background-color: #e8222e;
-	border: none;
-	cursor: pointer;
-	margin: 5px;
+	margin: auto;
+	width: 30vw;
 
 	@media(max-width: 800px){
-		width: 63vw;
-		height: 6vh;
-		font-size: 12pt;
+		width: 60vw;
 	}
-}
-
-.btn-container input[type='button']:hover{
-	color: white;
 }
 
 button{
-	width: 41.5vw;
-	height: 7vh;
-	font-weight: bold;
-	font-size: 13pt;
-	background-color: #e8222e;
-	border: none;
-	cursor: pointer;
-	margin: 5px;
+    width: 30vw;
 
-	@media(max-width: 800px){
-		width: 63vw;
-		height: 6vh;
-		font-size: 12pt;
-	}
+    @media(max-width: 800px){
+        width: 60vw;
+    }    
 }
 
-button:hover{
-	color: white;
+p{
+    margin-top: 5vh;
 }

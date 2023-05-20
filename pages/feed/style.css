@@ -59,7 +59,7 @@
 }
 
 .image{
-    width: 50vw;
+    /* width: 50vw;
 	height: 50vh;
 	cursor: pointer;
 
@@ -71,7 +71,7 @@
 	@media(max-width: 600px){
 		width: 80vw;
 		height: 30vh;
-	}
+	} */
 }
 
 .time{

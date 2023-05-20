@@ -35,8 +35,7 @@ const listaDeRestaurantes = ()=>{
                     <div class='card' key=${restaurant.id}>
                         <img
                             onclick='restaurantDetail("${restaurant.id}")' 
-                            src=${restaurant.logoUrl}
-                            class='image'>
+                            src=${restaurant.logoUrl}>
                         <div style="margin: 15px;">
                             ${restaurant.name}
                             <div class='time'>
