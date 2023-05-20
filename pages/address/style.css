@@ -21,18 +21,16 @@ header h1{
 }
 
 form{
-    line-height: 10vh;
+    line-height: 10px;
 
 	@media(max-width: 800px){
-		line-height: 8vh;
+		line-height: 8px;
 	}
 }
 
-form input{
-    height: 7vh;
-    width: 40vw;
-    padding-left: 10px;
-    font-size: 13pt;
+form .input{
+    width: 30vw;
+    margin: auto;
 
     @media(max-width: 800px){
         width: 60vw;
@@ -41,17 +39,11 @@ form input{
 }
 
 form button{
-    width: 41.5vw;
-    height: 7vh;
-    font-weight: bold;
-    font-size: 13pt;
-    background-color: #e8222e;
-    border: none;
+    width: 30vw;
     cursor: pointer;
 
     @media(max-width: 800px){
-        width: 63vw;
-        height: 6vh;
+        width: 60vw;
         font-size: 12pt;
     }
 }
