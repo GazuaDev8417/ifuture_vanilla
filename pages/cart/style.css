@@ -47,20 +47,19 @@ header img{
 	border-radius: 10px;
 	margin: 10px;
 	padding-right: 5px;
+
+	@media(max-width: 600px){
+		flex-direction: column;
+	}
 }
 
 .card .picture{
 	width: 120px;
 	height: 170px;	
 	border-radius: 10px;
-	@media(max-width: 460px){
-		width: 75vw;
-	}
-	@media(max-width: 388px){
-		width: 63vw;
-	}
-	@media(max-width: 260px){
-		width: 50vw;
+	
+	@media(max-width: 600px){
+		width: 100%;
 	}
 }
 
@@ -71,6 +70,10 @@ header img{
 	padding: 10px;
 	border-radius: 10px;
 	line-height: 3vh;
+
+	@media(max-width: 600px){
+		width: 95%;
+	}
 }
 
 .card button{
@@ -78,6 +81,11 @@ header img{
 	background-color: #e8222e;
 	cursor: pointer;
 	margin-right: 3vw;
+
+	@media(max-width: 600px){
+		margin: 10px;
+		width: 80%;
+	}
 }
 
 .final{
