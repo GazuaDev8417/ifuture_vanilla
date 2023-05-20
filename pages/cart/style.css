@@ -1,6 +1,5 @@
 .container{
-    margin: 23px;
-	line-height: 6vh;
+	text-align: center;
 }
 
 header{
@@ -22,11 +21,12 @@ header img{
 .sectionOne{
     display: flex;
 	align-items: center;
+	text-align: left;
 	justify-content: space-between;
-	padding-right: 10px;
+	padding: 0 10px;
 	background-color: rgb(175, 168, 168);
-    padding-left: 10px;
-    line-height: 7vh;
+    line-height: 5vh;
+	border-radius: 10px;
 }
 
 .sectionOne .edit{
@@ -41,6 +41,7 @@ header img{
 
 .card{
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 	border: 1px solid;
@@ -55,7 +56,8 @@ header img{
 
 .card .picture{
 	width: 120px;
-	height: 170px;	
+	height: 170px;
+	border-radius: 10px;	
 	
 	@media(max-width: 600px){
 		width: 100%;
@@ -65,12 +67,15 @@ header img{
 .card .section{
 	background-color: rgba(175, 168, 168, 0.5);
 	text-align: center;
+	border-radius: 10px;
 	width: 50%;
 	padding: 10px;
-	line-height: 3vh;
+	line-height: 4vh;
 
 	@media(max-width: 600px){
 		width: 95%;
+		margin: 5px 0;
+		line-height: 5vh;
 	}
 }
 
@@ -88,7 +93,7 @@ header img{
 
 .final{
 	margin: 5px;
-	width: 88vw;
+	width: 80vw;
 	height: 7vh;
 	font-weight: bold;
 	font-size: 13pt;

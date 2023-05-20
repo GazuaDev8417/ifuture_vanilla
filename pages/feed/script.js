@@ -34,6 +34,7 @@ const listaDeRestaurantes = ()=>{
                 return `
                     <div class='card' key=${restaurant.id}>
                         <img
+                            class='image'
                             onclick='restaurantDetail("${restaurant.id}")' 
                             src=${restaurant.logoUrl}>
                         <div style="margin: 15px;">
@@ -62,9 +63,9 @@ const listaDeRestaurantes = ()=>{
             return `
                 <div class='card' key=${restaurant.id}>
                     <img
+                        class='image'
                         onclick='restaurantDetail("${restaurant.id}")' 
-                        src=${restaurant.logoUrl}
-                        class='image'>
+                        src=${restaurant.logoUrl}>
                     <div style="margin: 15px;">
                         ${restaurant.name}
                         <div class='time'>
@@ -99,9 +100,9 @@ const categoryFilter = (category)=>{
         return `
             <div class='card' key=${restaurant.id}>
                 <img
+                    class='image'
                     onclick='restaurantDetail("${restaurant.id}")' 
-                    src=${restaurant.logoUrl}
-                    class='image'>
+                    src=${restaurant.logoUrl}>
                 <div style="margin: 15px;">
                     ${restaurant.name}
                     <div class='time'>
