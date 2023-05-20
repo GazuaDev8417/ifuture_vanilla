@@ -1,5 +1,4 @@
 .container{
-	margin: 23px;
 	line-height: 4vh;
 }
 
@@ -7,17 +6,21 @@ header{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 10vh;
+	margin: 10vh 0 5vh;	
 }
 
 header img{
 	width: 50px;
 	cursor: pointer;
+	
+	@media(max-width: 800px){
+		width: 30px;
+	}
 }
 
-header .header-icon{
-	@media(max-width: 600px){
-		width: 30px;
+header h1{
+	@media(max-width: 800px){
+		font-size: 13pt;
 	}
 }
 
@@ -65,7 +68,7 @@ footer{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 10px;
+	margin: 10vh 0;
 }
 
 footer img{

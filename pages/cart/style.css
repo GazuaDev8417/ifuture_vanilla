@@ -10,12 +10,18 @@ header{
 }
 
 header img{
-    width: 50px;
+	width: 50px;
 	cursor: pointer;
+	
+	@media(max-width: 800px){
+		width: 30px;
+	}
+}
 
-    @media(max-width: 600px){
-        width: 30px;
-    }
+header h1{
+	@media(max-width: 800px){
+		font-size: 13pt;
+	}
 }
 
 .sectionOne{
