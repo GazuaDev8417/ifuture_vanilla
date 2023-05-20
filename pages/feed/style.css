@@ -65,6 +65,12 @@
 
 	@media(max-width: 800px){
 		width: 80vw;
+		height: 60vh;
+	}
+
+	@media(max-width: 600px){
+		width: 80vw;
+		height: 30vh;
 	}
 }
 

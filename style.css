@@ -5,11 +5,11 @@
 }
 
 .formulario{
-    line-height: 10vh;
+    line-height: 9vh;
     margin-bottom: 10vh;
 
 	@media(max-width: 800px){
-		line-height: 9vh;        
+		line-height: 8.5vh;        
 	}
 }
 
@@ -20,8 +20,8 @@ input{
     font-size: 13pt;
 
     @media(max-width: 800px){
-        width: 60vw;
-        height: 6vh;
+        width: 60%;
+        height: 7vh;
     }
 }
 
@@ -35,7 +35,7 @@ button{
     cursor: pointer;
 
     @media(max-width: 800px){
-        width: 63vw;
+        width: 62%;
         height: 6vh;
         font-size: 12pt;
     }

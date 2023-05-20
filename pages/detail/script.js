@@ -40,7 +40,7 @@ const restMenu = ()=>{
             return`
                 <div class='card-products' key=${product.id}>
                     <img src=${product.photoUrl} class='picture' alt'imagem'>
-                    <div style='margin: 10px;'>
+                    <div class='description'>
                         <h4>${product.name}</h4>
                         <p style='font-size: 10pt;'>
                             ${product.description}

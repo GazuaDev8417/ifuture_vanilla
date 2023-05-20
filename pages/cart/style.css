@@ -91,7 +91,7 @@ header img{
 	cursor: pointer;
 
 	@media(max-width: 800px){
-		height: 6vh;
+		height: 5vh;
 		font-size: 12pt;
 	}
 }
