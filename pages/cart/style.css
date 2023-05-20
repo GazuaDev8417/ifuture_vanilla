@@ -56,7 +56,6 @@ header img{
 .card .picture{
 	width: 120px;
 	height: 170px;	
-	border-radius: 10px;
 	
 	@media(max-width: 600px){
 		width: 100%;
@@ -68,7 +67,6 @@ header img{
 	text-align: center;
 	width: 50%;
 	padding: 10px;
-	border-radius: 10px;
 	line-height: 3vh;
 
 	@media(max-width: 600px){
