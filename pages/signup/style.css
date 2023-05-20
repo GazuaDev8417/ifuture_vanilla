@@ -17,7 +17,7 @@ form{
     margin: auto;
 
     @media(max-width: 800px){
-        width: 60vw;
+        width: 80vw;
     }
 }
 
@@ -28,7 +28,7 @@ form{
 	width: 30vw;
 
 	@media(max-width: 800px){
-		width: 60vw;
+		width: 80vw;
 	}
 }
 
@@ -36,7 +36,7 @@ button{
     width: 30vw;
 
     @media(max-width: 800px){
-        width: 60vw;
+        width: 80vw;
     }    
 }
 
