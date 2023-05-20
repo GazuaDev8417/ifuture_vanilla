@@ -70,7 +70,7 @@
 	border-radius: 10px;
 
 	@media(max-width: 600px){
-		width: 75vw;
+		width: 73vw;
 		height: 25vh;
 	}
 }
