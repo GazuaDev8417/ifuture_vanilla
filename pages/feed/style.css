@@ -59,6 +59,10 @@
 .image{
 	height: 50vh;
 	cursor: pointer;
+
+	@media(max-width: 600px){
+		height: 35vh;
+	}
 }
 
 .time{
