@@ -2,7 +2,7 @@ header{
     display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 10vh;
+	margin: 5vh 10px;
 }
 
 header img{
@@ -33,7 +33,7 @@ form .input{
     margin: auto;
 
     @media(max-width: 800px){
-        width: 60vw;
+        width: 70vw;
         height: 6vh;
     }
 }
@@ -43,7 +43,7 @@ form button{
     cursor: pointer;
 
     @media(max-width: 800px){
-        width: 60vw;
+        width: 70vw;
         font-size: 12pt;
     }
 }
