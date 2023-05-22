@@ -12,9 +12,13 @@
     width: 50vw;
 	height: 50vh;
 
-	@media(max-width: 600px){
+	@media(max-width: 800px){
 		width: 80vw;
-		height: 30vh;
+		height: 40vh;
+	}
+
+	@media(max-width: 800px){
+		height: 50vh;
 	}
 }
 
